@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.play.PlayActivity">
+
+    <include layout="@layout/main_appbar"
+        android:id="@+id/play.toolbar"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/play.image"
+        android:layout_centerInParent="true"
+        android:layout_width="250dp"
+        android:layout_height="250dp" />
+
+    <LinearLayout
+        android:layout_margin="@dimen/margin_default"
+        android:layout_below="@id/play.image"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/play.txt.position"
+            android:layout_weight="0.1"
+            android:textColor="@color/textBlack"
+            android:text="00:00"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <ProgressBar
+            android:id="@+id/play.progress"
+            android:layout_weight="0.8"
+            android:layout_marginLeft="@dimen/margin_default"
+            android:layout_marginRight="@dimen/margin_default"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/play.txt.duration"
+            android:layout_weight="0.1"
+            android:textColor="@color/textBlack"
+            android:text="00:00"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</RelativeLayout>
